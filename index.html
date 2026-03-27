@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MRPOA Social Media Strategy 2025–2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --deep: #0B2027;
+  --navy: #1B4965;
+  --river: #3E7C98;
+  --sky: #5FA8D3;
+  --pine: #3D7A2A;
+  --pine-light: #E9F3E5;
+  --gold: #D4A843;
+  --gold-soft: #FFF8EA;
+  --sand: #F6F1E9;
+  --cream: #FDFBF7;
+  --white: #FFFFFF;
+  --text: #1C1C1C;
+  --muted: #5E6368;
+  --light: #9BA0A5;
+  --border: #E8E4DC;
+  --fb-blue: #1877F2;
+  --fb-bg: #F0F2F5;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Outfit', -apple-system, sans-serif;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== COVER ===== */
+.cover {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  background: var(--deep);
+  color: var(--white);
+  padding: 3rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(62,124,152,0.2), transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(212,168,67,0.12), transparent 50%);
+}
+
+.cover > * { position: relative; z-index: 1; }
+
+.cover-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 100px;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+
+.cover h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  max-width: 680px;
+  margin-bottom: 1rem;
+}
+
+.cover h1 em { font-style: normal; color: var(--gold); }
+
+.cover p {
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  color: rgba(255,255,255,0.7);
+  max-width: 520px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.cover-meta {
+  margin-top: 2.5rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.05em;
+}
+
+/* ===== DOCUMENT LAYOUT ===== */
+.doc {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 5vw, 2.5rem);
+}
+
+.doc-section {
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.doc-section:last-child { border-bottom: none; }
+
+.doc-label {
+  font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--river);
+  margin-bottom: 0.65rem;
+}
+
+.doc-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  font-weight: 700;
+  color: var(--deep);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.doc-lead {
+  font-size: 1.05rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.75;
+  max-width: 600px;
+}
+
+.doc p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-top: 1rem;
+}
+
+.doc strong { color: var(--text); font-weight: 600; }
+
+/* ===== STAT BANNER ===== */
+.stat-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.stat {
+  background: var(--white);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--deep);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--light);
+  margin-top: 0.15rem;
+  letter-spacing: 0.03em;
+}
+
+/* ===== PILLAR CARDS ===== */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+@media(max-width:520px) { .pillar-grid { grid-template-columns: 1fr; } }
+
+.pillar-card {
+  border-radius: 14px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pillar-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+}
+
+.pillar-events { background: var(--gold-soft); }
+.pillar-events::before { background: var(--gold); }
+.pillar-community { background: #EBF5FF; }
+.pillar-community::before { background: var(--sky); }
+.pillar-steward { background: var(--pine-light); }
+.pillar-steward::before { background: var(--pine); }
+.pillar-partner { background: #F3EEF8; }
+.pillar-partner::before { background: #8B6DB0; }
+
+.pillar-pct {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.pillar-events .pillar-pct { color: var(--gold); }
+.pillar-community .pillar-pct { color: var(--sky); }
+.pillar-steward .pillar-pct { color: var(--pine); }
+.pillar-partner .pillar-pct { color: #8B6DB0; }
+
+.pillar-name {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text);
+  margin-top: 0.35rem;
+}
+
+.pillar-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.35rem;
+  line-height: 1.55;
+}
+
+/* ===== FACEBOOK POST MOCKUP ===== */
+.fb-mockup {
+  background: var(--white);
+  border-radius: 10px;
+  border: 1px solid #DADDE1;
+  overflow: hidden;
+  margin: 2rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  max-width: 500px;
+}
+
+.fb-header {
+  display: flex; align-items: center; gap: 0.65rem;
+  padding: 0.85rem 1rem 0;
+}
+
+.fb-avatar {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--deep);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 0.95rem; font-weight: 700;
+  flex-shrink: 0;
+}
+
+.fb-meta { flex: 1; }
+
+.fb-name {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #050505;
+}
+
+.fb-time {
+  font-size: 0.75rem;
+  color: #65676B;
+}
+
+.fb-body {
+  padding: 0.65rem 1rem 0.85rem;
+  font-size: 0.88rem;
+  color: #050505;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.fb-body .hashtags { color: var(--fb-blue); }
+
+.fb-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.fb-actions {
+  display: flex;
+  border-top: 1px solid #DADDE1;
+  padding: 0.35rem 0.5rem;
+}
+
+.fb-action {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center; gap: 0.4rem;
+  padding: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #65676B;
+  border-radius: 6px;
+  cursor: default;
+}
+
+.fb-engagement {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.78rem;
+  color: #65676B;
+}
+
+.fb-likes { display: flex; align-items: center; gap: 0.3rem; }
+.fb-like-icons {
+  display: flex;
+}
+.fb-like-icon {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.6rem;
+  border: 2px solid white;
+  margin-right: -5px;
+}
+.fb-like-icon.heart { background: #F33E58; color: white; }
+.fb-like-icon.thumbs { background: var(--fb-blue); color: white; }
+
+.fb-sample-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.65rem;
+  color: var(--white);
+  border-radius: 10px 10px 0 0;
+}
+
+.fb-sample-label.event { background: var(--gold); color: var(--deep); }
+.fb-sample-label.partner { background: #8B6DB0; }
+.fb-sample-label.steward { background: var(--pine); }
+
+/* ===== TIMELINE ===== */
+.timeline {
+  margin: 2rem 0;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+.tl-item {
+  position: relative;
+  padding-bottom: 1.75rem;
+}
+
+.tl-item:last-child { padding-bottom: 0; }
+
+.tl-dot {
+  position: absolute;
+  left: -2rem; top: 3px;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--river);
+  border: 3px solid var(--cream);
+}
+
+.tl-item.gold .tl-dot { background: var(--gold); }
+.tl-item.green .tl-dot { background: var(--pine); }
+
+.tl-month {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--deep);
+}
+
+.tl-posts {
+  margin-top: 0.5rem;
+  display: flex; flex-direction: column; gap: 0.35rem;
+}
+
+.tl-post {
+  font-size: 0.82rem;
+  color: var(--muted);
+  display: flex; align-items: baseline; gap: 0.5rem;
+}
+
+.tl-tag {
+  font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 1px 6px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.tl-tag.ev { background: var(--gold-soft); color: #8B6C14; }
+.tl-tag.en { background: #EBF5FF; color: #1B5FAD; }
+.tl-tag.st { background: var(--pine-light); color: #2A5C1C; }
+.tl-tag.pa { background: #F3EEF8; color: #6B4D8A; }
+
+/* ===== AUTOMATION BOX ===== */
+.auto-box {
+  background: var(--deep);
+  border-radius: 16px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--white);
+  margin: 2rem 0;
+}
+
+.auto-box h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.auto-step {
+  display: flex; gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.auto-num {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.85rem; font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.auto-text { font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.6; }
+.auto-text strong { color: var(--white); }
+
+/* ===== COST TABLE ===== */
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.88rem;
+}
+
+.cost-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: var(--sand);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 2px solid var(--border);
+}
+
+.cost-table td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.cost-table td:last-child { font-weight: 600; color: var(--pine); }
+
+.cost-total td {
+  font-weight: 700;
+  color: var(--deep);
+  background: var(--pine-light);
+  border-bottom: none;
+}
+
+/* ===== CALLOUT ===== */
+.callout {
+  border-left: 4px solid var(--gold);
+  background: var(--gold-soft);
+  border-radius: 0 12px 12px 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.callout p {
+  color: var(--text);
+  font-size: 0.92rem;
+  margin-top: 0;
+  line-height: 1.65;
+}
+
+.callout strong { color: var(--deep); }
+
+/* ===== FOOTER ===== */
+.doc-footer {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: var(--deep);
+  color: rgba(255,255,255,0.4);
+  font-size: 0.78rem;
+}
+
+.doc-footer strong { color: var(--gold); }
+
+@media print {
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cover { min-height: auto; padding: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<div class="cover">
+  <div class="cover-badge">&#9733; Board Strategy Document</div>
+  <h1>MRPOA <em>Social Media</em> Strategy</h1>
+  <p>A year-round plan to grow visibility, drive membership, and build community on the Moon River — with pre-written content, automation tools, and zero cost.</p>
+  <div class="cover-meta">Moon River Property Owners' Association &middot; 2025–2026 Season &middot; Prepared for Board Review</div>
+</div>
+
+<div class="doc">
+
+  <!-- ===== THE OPPORTUNITY ===== -->
+  <div class="doc-section">
+    <div class="doc-label">The Opportunity</div>
+    <div class="doc-title">775 followers. 2 talking. We can do better.</div>
+    <p class="doc-lead">MRPOA's Facebook page has a solid follower base but almost zero consistent engagement. Posts happen around events and then go silent for weeks. The algorithm punishes inconsistency — meaning fewer people see each post over time.</p>
+    <p>The fix isn't more effort. It's a <strong>system</strong> — pre-written content, scheduled in advance, mixing our own events with community engagement and partner content so the page feels alive year-round. Total time commitment: <strong>30 minutes per month</strong> of batch scheduling, plus 15 minutes per event for real-time recaps.</p>
+
+    <div class="stat-banner">
+      <div class="stat"><div class="stat-num">90+</div><div class="stat-label">Posts / Year</div></div>
+      <div class="stat"><div class="stat-num">$0</div><div class="stat-label">Monthly Cost</div></div>
+      <div class="stat"><div class="stat-num">30</div><div class="stat-label">Min / Month</div></div>
+      <div class="stat"><div class="stat-num">1,000+</div><div class="stat-label">Follower Target</div></div>
+    </div>
+  </div>
+
+  <!-- ===== FOUR PILLARS ===== -->
+  <div class="doc-section">
+    <div class="doc-label">Content Strategy</div>
+    <div class="doc-title">Four Pillars — Never Just One Note</div>
+    <p class="doc-lead">Every post falls into one of four categories. The mix ensures variety and stops the page from feeling like a one-note bulletin board.</p>
+
+    <div class="pillar-grid">
+      <div class="pillar-card pillar-events">
+        <div class="pillar-pct">40%</div>
+        <div class="pillar-name">Our Events</div>
+        <div class="pillar-desc">Jazz Cruise, Regatta, Fishing Derby, Golf, AGMs. Each gets a 4-post arc: promo, hype, day-of, recap. Real photos of real people.</div>
+      </div>
+      <div class="pillar-card pillar-community">
+        <div class="pillar-pct">25%</div>
+        <div class="pillar-name">Community & Engagement</div>
+        <div class="pillar-desc">Ice-out predictions, throwback photos, "share your favourite memory," fall colour contests. Posts that make people comment and share.</div>
+      </div>
+      <div class="pillar-card pillar-steward">
+        <div class="pillar-pct">20%</div>
+        <div class="pillar-name">Education & Stewardship</div>
+        <div class="pillar-desc">Water quality data (our own since 2007), Moon River Code, shoreline tips, dark sky, bear safety, septic care. Positions MRPOA as the expert.</div>
+      </div>
+      <div class="pillar-card pillar-partner">
+        <div class="pillar-pct">15%</div>
+        <div class="pillar-name">Partner & Civic</div>
+        <div class="pillar-desc">Township of Muskoka Lakes news + FOCA resources — always remixed with MRPOA's local angle, never just reshared.</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p><strong>The golden rule:</strong> Never hit "share" on a Township or FOCA post. Write your own caption with MRPOA's angle. "Here's what this means for Moon River property owners..." turns generic news into content your members actually care about.</p>
+    </div>
+  </div>
+
+  <!-- ===== SAMPLE POST 1: Event ===== -->
+  <div class="doc-section">
+    <div class="doc-label">Sample Post #1</div>
+    <div class="doc-title">Event Post — Jazz Cruise Countdown</div>
+    <p class="doc-lead">This is what a "hype" post looks like one week before a signature event. Notice the specific details, sponsor tag, and emotional hook.</p>
+
+    <div class="fb-sample-label event">Event Pillar — Hype Post (1 Week Before)</div>
+    <div class="fb-mockup">
+      <div class="fb-header">
+        <div class="fb-avatar">M</div>
+        <div class="fb-meta">
+          <div class="fb-name">Moon River Property Owners' Association</div>
+          <div class="fb-time">July 25 &middot; &#127758;</div>
+        </div>
+      </div>
+      <div class="fb-body">&#127927; ONE WEEK! The MRPOA Jazz Cruise is August 2.
+
+5:30 PM from Roselawn dock. Live jazz floating down the Moon River as the sun sets. There is nothing else like it in Muskoka.
+
+Sponsored by Red Canoe Gallery — 31 years bringing Canadian art to Muskoka.
+
+Grab your canoe, kayak, or pontoon and find a spot on the water. This is the evening you don't want to miss.
+
+<span class="hashtags">#JazzCruise #MoonRiver #MRPOA #RedCanoeGallery</span></div>
+      <img class="fb-image" src="https://lh3.googleusercontent.com/pw/AP1GczOBafu-eM70_jfOyHJg_YNcDekcmYTwHXrl8y7FoM0kme97Du6vB5iANWYrMYzQp-0xaiHzDpmVq_gzplc8hf8igSeom7oaYHEdJI0kJU9n3a1kvv8=w800-h600-no" alt="Jazz Cruise on the Moon River">
+      <div class="fb-engagement">
+        <div class="fb-likes">
+          <div class="fb-like-icons">
+            <div class="fb-like-icon thumbs">&#128077;</div>
+            <div class="fb-like-icon heart">&#10084;</div>
+          </div>
+          &nbsp;47
+        </div>
+        <div>12 comments &middot; 8 shares</div>
+      </div>
+      <div class="fb-actions">
+        <div class="fb-action">&#128077; Like</div>
+        <div class="fb-action">&#128172; Comment</div>
+        <div class="fb-action">&#8618; Share</div>
+      </div>
+    </div>
+
+    <p><strong>Why this works:</strong> Specific date, time, and location. Emotional language ("nothing else like it in Muskoka"). Sponsor gets named naturally, not awkwardly. The real Jazz Cruise photo from your 2022 album creates instant recognition. Posted a week out, this gives people time to plan — then the day-before "TOMORROW NIGHT" post creates final urgency.</p>
+  </div>
+
+  <!-- ===== SAMPLE POST 2: Partner Remix ===== -->
+  <div class="doc-section">
+    <div class="doc-label">Sample Post #2</div>
+    <div class="doc-title">Partner Remix — FOCA + MRPOA Data</div>
+    <p class="doc-lead">This shows how to take a provincial FOCA resource and localize it with MRPOA's own water quality data. This is <em>not</em> resharing — it's adding unique value.</p>
+
+    <div class="fb-sample-label steward">Stewardship + Partner Pillar — Localized Remix</div>
+    <div class="fb-mockup">
+      <div class="fb-header">
+        <div class="fb-avatar">M</div>
+        <div class="fb-meta">
+          <div class="fb-name">Moon River Property Owners' Association</div>
+          <div class="fb-time">July 20 &middot; &#127758;</div>
+        </div>
+      </div>
+      <div class="fb-body">&#128300; SEPTIC CHECK: FOCA reminds us that a failing septic system is the #1 local threat to water quality in cottage country.
+
+Here on the Moon River, MRPOA volunteers have tracked phosphorus levels since 2007 — and the news is good. Our levels are the lowest on record.
+
+Keep it that way:
+&#9989; Pump every 3–5 years
+&#9989; Use septic-safe products
+&#9989; Don't overload on big weekends with too many guests
+
+Your well-maintained septic = our clean river.
+
+Learn more: foca.on.ca/septic-systems
+
+<span class="hashtags">#CleanWater #SepticCare #MoonRiver #FOCA</span></div>
+      <div class="fb-engagement">
+        <div class="fb-likes">
+          <div class="fb-like-icons">
+            <div class="fb-like-icon thumbs">&#128077;</div>
+          </div>
+          &nbsp;31
+        </div>
+        <div>6 comments &middot; 14 shares</div>
+      </div>
+      <div class="fb-actions">
+        <div class="fb-action">&#128077; Like</div>
+        <div class="fb-action">&#128172; Comment</div>
+        <div class="fb-action">&#8618; Share</div>
+      </div>
+    </div>
+
+    <p><strong>Why this works:</strong> Opens with FOCA's credibility (provincial authority), then immediately pivots to <strong>"Here on the Moon River"</strong> with MRPOA's own 15+ years of data. The reader gets actionable tips, a link for deeper reading, and the sense that MRPOA is both locally expert and provincially connected. This is the opposite of just hitting "share" on a FOCA post.</p>
+  </div>
+
+  <!-- ===== SAMPLE POST 3: Engagement ===== -->
+  <div class="doc-section">
+    <div class="doc-label">Sample Post #3</div>
+    <div class="doc-title">Engagement Post — Ice Out Watch</div>
+    <p class="doc-lead">Pure community engagement. No agenda, no ask — just the annual tradition that gets everyone talking.</p>
+
+    <div class="fb-sample-label" style="background:var(--sky);">Community Pillar — Engagement Post</div>
+    <div class="fb-mockup">
+      <div class="fb-header">
+        <div class="fb-avatar">M</div>
+        <div class="fb-meta">
+          <div class="fb-name">Moon River Property Owners' Association</div>
+          <div class="fb-time">March 23 &middot; &#127758;</div>
+        </div>
+      </div>
+      <div class="fb-body">&#129482; ICE OUT WATCH IS ON!
+
+The annual tradition: who calls it first? When will the Moon River be clear of ice?
+
+Drop your predictions below — date AND time. Closest guess gets bragging rights all summer. &#127942;
+
+Last year it was April 14. Early spring or late? What do you think?
+
+<span class="hashtags">#IceOut #MoonRiver #Muskoka #SpringWatch</span></div>
+      <div class="fb-engagement">
+        <div class="fb-likes">
+          <div class="fb-like-icons">
+            <div class="fb-like-icon thumbs">&#128077;</div>
+            <div class="fb-like-icon heart">&#10084;</div>
+          </div>
+          &nbsp;68
+        </div>
+        <div>43 comments &middot; 11 shares</div>
+      </div>
+      <div class="fb-actions">
+        <div class="fb-action">&#128077; Like</div>
+        <div class="fb-action">&#128172; Comment</div>
+        <div class="fb-action">&#8618; Share</div>
+      </div>
+    </div>
+
+    <p><strong>Why this works:</strong> Notice the simulated engagement — 43 comments. That's realistic for this type of post. Ice-out predictions tap into seasonal anticipation that every Moon River property owner feels. The comment thread becomes its own content as people debate and check back. This will likely be your highest-performing post of the year.</p>
+  </div>
+
+  <!-- ===== SEASONAL TIMELINE ===== -->
+  <div class="doc-section">
+    <div class="doc-label">Annual Calendar</div>
+    <div class="doc-title">The Year at a Glance</div>
+    <p class="doc-lead">41 pre-written posts across 12 months, ready to copy/paste into Meta Business Suite. Here's the rhythm.</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-month">April — Season Opener</div>
+        <div class="tl-posts">
+          <div class="tl-post"><span class="tl-tag en">Engage</span> Ice out watch &amp; spring countdown</div>
+          <div class="tl-post"><span class="tl-tag pa">Partner</span> Township community grants alert</div>
+          <div class="tl-post"><span class="tl-tag ev">Event</span> Membership drive launch ($40 early bird)</div>
+          <div class="tl-post"><span class="tl-tag pa">Partner</span> FOCA network spotlight</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-month">May — Ramp Up</div>
+        <div class="tl-posts">
+          <div class="tl-post"><span class="tl-tag st">Steward</span> Moon River Code for new owners &amp; renters</div>
+          <div class="tl-post"><span class="tl-tag en">Engage</span> Dock Dress-Up 2022 throwback</div>
+          <div class="tl-post"><span class="tl-tag st">Steward</span> Shoreline buffer 101</div>
+          <div class="tl-post"><span class="tl-tag ev">Event</span> Early bird membership deadline urgency</div>
+        </div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-dot"></div>
+        <div class="tl-month">June — Summer Begins</div>
+        <div class="tl-posts">
+          <div class="tl-post"><span class="tl-tag en">Engage</span> "Welcome back" summer opener</div>
+          <div class="tl-post"><span class="tl-tag pa">Partner</span> Township STR licensing update</div>
+          <div class="tl-post"><span class="tl-tag ev">Event</span> Spring Meeting promo + recap</div>
+          <div class="tl-post"><span class="tl-tag ev">Event</span> Fishing Derby countdown</div>
+        </div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-dot"></div>
+        <div class="tl-month">July — Peak Season</div>
+        <div class="tl-posts">
+          <div class="tl-post"><span class="tl-tag ev">Event</span> Fishing Derby results + photos</div>
+          <div class="tl-post"><span class="tl-tag st">Steward</span> Boating safety &amp; wake awareness</div>
+          <div class="tl-post"><span class="tl-tag pa">Partner</span> FOCA septic care + MRPOA water data</div>
+          <div class="tl-post"><span class="tl-tag ev">Event</span> Jazz Cruise one-week countdown</div>
+        </div>
+      </div>
+      <div class="tl-item gold">
+        <div class="tl-dot"></div>
+        <div class="tl-month">August — Events Peak</div>
+        <div class="tl-posts">
+          <div class="tl-post"><span class="tl-tag ev">Event</span> Jazz Cruise eve + recap</div>
+          <div class="tl-post"><span class="tl-tag ev">Event</span> Regatta promo + same-day recap</div>
+          <div class="tl-post"><span class="tl-tag st">Steward</span> Water quality spotlight (own data)</div>
+          <div class="tl-post"><span class="tl-tag st">Steward</span> Bear safety PSA</div>
+          <div class="tl-post"><span class="tl-tag ev">Event</span> Golf Tournament promo</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-month">September — Wind Down</div>
+        <div class="tl-posts">
+          <div class="tl-post"><span class="tl-tag en">Engage</span> Labour Day — "favourite summer memory"</div>
+          <div class="tl-post"><span class="tl-tag pa">Partner</span> FOCA cottage succession series</div>
+          <div class="tl-post"><span class="tl-tag en">Engage</span> Fall colours photo contest</div>
+          <div class="tl-post"><span class="tl-tag ev">Event</span> Fall AGM save-the-date</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-month">October – March — Off-Season</div>
+        <div class="tl-posts">
+          <div class="tl-post"><span class="tl-tag ev">Event</span> AGM reminder + recap</div>
+          <div class="tl-post"><span class="tl-tag st">Steward</span> Closing-up tips &amp; checklist</div>
+          <div class="tl-post"><span class="tl-tag en">Engage</span> Year in review + best photos carousel</div>
+          <div class="tl-post"><span class="tl-tag pa">Partner</span> 2026 municipal election watch</div>
+          <div class="tl-post"><span class="tl-tag en">Engage</span> Winter beauty photos</div>
+          <div class="tl-post"><span class="tl-tag pa">Partner</span> FOCA Elert subscription promo</div>
+          <div class="tl-post"><span class="tl-tag ev">Event</span> 2026 membership launch</div>
+          <div class="tl-post"><span class="tl-tag en">Engage</span> Ice out watch (cycle restarts!)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== AUTOMATION ===== -->
+  <div class="doc-section">
+    <div class="doc-label">How It Gets Done</div>
+    <div class="doc-title">The 30-Minute Monthly Workflow</div>
+
+    <div class="auto-box">
+      <h3>Batch Scheduling — Once Per Month</h3>
+      <div class="auto-step">
+        <div class="auto-num">1</div>
+        <div class="auto-text">Open the <strong>52-Week Calendar spreadsheet</strong> (provided). Find this month's 3–5 pre-written posts.</div>
+      </div>
+      <div class="auto-step">
+        <div class="auto-num">2</div>
+        <div class="auto-text">Open <strong>Meta Business Suite</strong> (business.facebook.com) — free tool from Facebook. Go to Planner → Create Post.</div>
+      </div>
+      <div class="auto-step">
+        <div class="auto-num">3</div>
+        <div class="auto-text"><strong>Copy/paste</strong> each caption from the spreadsheet. Attach the suggested photo from Google Photos or Canva.</div>
+      </div>
+      <div class="auto-step">
+        <div class="auto-num">4</div>
+        <div class="auto-text">Set the <strong>date and time</strong> (Thurs/Fri 11AM for weekdays, Saturday 9AM for weekends). Click Schedule.</div>
+      </div>
+      <div class="auto-step">
+        <div class="auto-num">5</div>
+        <div class="auto-text"><strong>Done for the month.</strong> For events: assign one person to take photos and post the recap same-day (the only post that can't be pre-scheduled).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== COSTS ===== -->
+  <div class="doc-section">
+    <div class="doc-label">Budget</div>
+    <div class="doc-title">Total Annual Cost: $0</div>
+    <p class="doc-lead">Every tool in this plan has a free tier that meets MRPOA's needs.</p>
+
+    <table class="cost-table">
+      <tr><th>Tool</th><th>Purpose</th><th>Cost</th></tr>
+      <tr><td>Meta Business Suite</td><td>Schedule FB + IG posts</td><td>Free</td></tr>
+      <tr><td>Canva</td><td>Event graphics &amp; infographics</td><td>Free</td></tr>
+      <tr><td>Google Photos Albums</td><td>Real MRPOA event photos</td><td>Free</td></tr>
+      <tr><td>52-Week Calendar</td><td>Pre-written captions</td><td>Provided</td></tr>
+      <tr class="cost-total"><td colspan="2">Total Monthly Cost</td><td>$0</td></tr>
+    </table>
+
+    <p><strong>Optional boost budget:</strong> $10–15 per post on 2–3 key posts per year (membership drive, Moon River Code for renters, one signature event). Targeted to Bala/Muskoka Lakes, ages 30–65. Total optional spend: ~$30–45/year.</p>
+  </div>
+
+  <!-- ===== BOARD ASK ===== -->
+  <div class="doc-section">
+    <div class="doc-label">Board Ask</div>
+    <div class="doc-title">One Volunteer, 30 Minutes a Month</div>
+
+    <div class="callout">
+      <p><strong>Recommendation:</strong> Assign one board member or volunteer as Social Media Lead with admin access to the MRPOA Facebook page, Meta Business Suite, this spreadsheet, and the Google Photos albums. The captions are pre-written. The photos exist. The tools are free. Approval for event recaps should be automatic — timeliness matters more than perfection on those.</p>
+    </div>
+
+    <p>The complete 52-week calendar with all 41 copy/paste-ready captions, the automation playbook, photo suggestions, and hashtag strategy is provided as a companion spreadsheet. This document is the strategy. That spreadsheet is the execution.</p>
+
+    <p style="margin-top:1.5rem; font-weight: 600; color: var(--deep);">Questions or feedback? Bring them to the next board meeting or email pres@mrpoa.org.</p>
+  </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="doc-footer">
+  <strong>Moon River Property Owners' Association</strong> &middot; mrpoa.org &middot; facebook.com/MRPOABALA<br>
+  Prepared for Board Review &middot; 2025–2026 Season
+</div>
+
+</body>
+</html>
